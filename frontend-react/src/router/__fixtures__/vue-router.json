@@ -1,0 +1,4219 @@
+{
+  "scenarios": {
+    "anonymousThenUser": {
+      "loginAs": {
+        "admin": false
+      }
+    },
+    "anonymousThenAdmin": {
+      "loginAs": {
+        "admin": true
+      }
+    },
+    "user": {
+      "user": {
+        "admin": false
+      }
+    },
+    "admin": {
+      "user": {
+        "admin": true
+      }
+    }
+  },
+  "cases": [
+    {
+      "url": "/",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/a/b",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/a/b",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a/b",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/a/b",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/a/b",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a/b",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/a/b",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/a/b",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/a/b",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/a/b",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/a/b/",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/a/b/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a/b/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/a/b/",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/a/b/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a/b/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/a/b/",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/a/b/",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/a/b/",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/a/b/",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/a%20b/?x=1#h",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/a%2520b/?x=1%23h",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a%20b/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/a%20b/?x=1#h",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/a%2520b/?x=1%23h",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a%20b/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/a%20b/?x=1#h",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/a%20b/?x=1#h",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/a%20b/?x=1#h",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/a%20b/?x=1#h",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/a+b?c=d+e",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/a%2Bb?c=d%2Be",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a+b",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/a+b?c=d+e",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/a%2Bb?c=d%2Be",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a+b",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/a+b?c=d+e",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/a+b?c=d+e",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/a+b?c=d+e",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/a+b?c=d+e",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/%E2%82%AC/",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/%25E2%2582%25AC/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/%E2%82%AC/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/%E2%82%AC/",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/%25E2%2582%25AC/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/%E2%82%AC/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/%E2%82%AC/",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/%E2%82%AC/",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/%E2%82%AC/",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/%E2%82%AC/",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/login",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/login",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files",
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/login",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/login",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files",
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/login",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/login",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/?redirect=1",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/?redirect=1",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/?redirect=1",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/?redirect=1",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/?redirect=1",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/?redirect=1",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/?redirect=1",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/?redirect=1",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/Files/X",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/Files/X",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/Files/X",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/Files/X",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/Files/X",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/Files/X",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/Files/X",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/Files/X",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/Files/X",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/Files/X",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/FILES/",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/FILES/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/FILES/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/FILES/",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/FILES/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/FILES/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/FILES/",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/FILES/",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/FILES/",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/FILES/",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/a%2Fb",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/a%252Fb",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a%2Fb",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/a%2Fb",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/a%252Fb",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a%2Fb",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/a%2Fb",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/a%2Fb",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/a%2Fb",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/a%2Fb",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/settings/profile",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "ProfileSettings",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "titles": [
+          "ProfileSettings"
+        ]
+      }
+    },
+    {
+      "url": "/settings",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/settings/profile",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "ProfileSettings",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "titles": [
+          "ProfileSettings"
+        ]
+      }
+    },
+    {
+      "url": "/settings",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "initCalls": 1,
+        "titles": [
+          "ProfileSettings"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "initCalls": 1,
+        "titles": [
+          "ProfileSettings"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/settings/profile",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "ProfileSettings",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "titles": [
+          "ProfileSettings"
+        ]
+      }
+    },
+    {
+      "url": "/settings/",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/settings/profile",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "ProfileSettings",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "titles": [
+          "ProfileSettings"
+        ]
+      }
+    },
+    {
+      "url": "/settings/",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "initCalls": 1,
+        "titles": [
+          "ProfileSettings"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "initCalls": 1,
+        "titles": [
+          "ProfileSettings"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/SETTINGS",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/settings/profile",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "ProfileSettings",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "titles": [
+          "ProfileSettings"
+        ]
+      }
+    },
+    {
+      "url": "/SETTINGS",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/settings/profile",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "ProfileSettings",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "titles": [
+          "ProfileSettings"
+        ]
+      }
+    },
+    {
+      "url": "/SETTINGS",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "initCalls": 1,
+        "titles": [
+          "ProfileSettings"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/SETTINGS",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "initCalls": 1,
+        "titles": [
+          "ProfileSettings"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings?tab=1#top",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/settings/profile?tab=1%23top",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "ProfileSettings",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "titles": [
+          "ProfileSettings"
+        ]
+      }
+    },
+    {
+      "url": "/settings?tab=1#top",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/settings/profile?tab=1%23top",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "ProfileSettings",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "titles": [
+          "ProfileSettings"
+        ]
+      }
+    },
+    {
+      "url": "/settings?tab=1#top",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/settings/profile?tab=1#top",
+        "name": "ProfileSettings",
+        "initCalls": 1,
+        "titles": [
+          "ProfileSettings"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings?tab=1#top",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/settings/profile?tab=1#top",
+        "name": "ProfileSettings",
+        "initCalls": 1,
+        "titles": [
+          "ProfileSettings"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/profile",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/settings/profile",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "ProfileSettings",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "titles": [
+          "ProfileSettings"
+        ]
+      }
+    },
+    {
+      "url": "/settings/profile",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/settings/profile",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "ProfileSettings",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "titles": [
+          "ProfileSettings"
+        ]
+      }
+    },
+    {
+      "url": "/settings/profile",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "initCalls": 1,
+        "titles": [
+          "ProfileSettings"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/profile",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "initCalls": 1,
+        "titles": [
+          "ProfileSettings"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/shares",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/settings/shares",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Shares",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/shares",
+        "name": "Shares",
+        "titles": [
+          "Shares"
+        ]
+      }
+    },
+    {
+      "url": "/settings/shares",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/settings/shares",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Shares",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/shares",
+        "name": "Shares",
+        "titles": [
+          "Shares"
+        ]
+      }
+    },
+    {
+      "url": "/settings/shares",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/settings/shares",
+        "name": "Shares",
+        "initCalls": 1,
+        "titles": [
+          "Shares"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/shares",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/settings/shares",
+        "name": "Shares",
+        "initCalls": 1,
+        "titles": [
+          "Shares"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/global",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/settings/global",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "GlobalSettings",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "titles": [
+          "GlobalSettings",
+          "Forbidden"
+        ]
+      }
+    },
+    {
+      "url": "/settings/global",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/settings/global",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "GlobalSettings",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/global",
+        "name": "GlobalSettings",
+        "titles": [
+          "GlobalSettings"
+        ]
+      }
+    },
+    {
+      "url": "/settings/global",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "initCalls": 2,
+        "titles": [
+          "GlobalSettings",
+          "Forbidden"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/global",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/settings/global",
+        "name": "GlobalSettings",
+        "initCalls": 1,
+        "titles": [
+          "GlobalSettings"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/users",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/settings/users",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Users",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "titles": [
+          "Users",
+          "Forbidden"
+        ]
+      }
+    },
+    {
+      "url": "/settings/users",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/settings/users",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Users",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/users",
+        "name": "Users",
+        "titles": [
+          "Users"
+        ]
+      }
+    },
+    {
+      "url": "/settings/users",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "initCalls": 2,
+        "titles": [
+          "Users",
+          "Forbidden"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/users",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/settings/users",
+        "name": "Users",
+        "initCalls": 1,
+        "titles": [
+          "Users"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/users/",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/settings/users/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Users",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "titles": [
+          "Users",
+          "Forbidden"
+        ]
+      }
+    },
+    {
+      "url": "/settings/users/",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/settings/users/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Users",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/users/",
+        "name": "Users",
+        "titles": [
+          "Users"
+        ]
+      }
+    },
+    {
+      "url": "/settings/users/",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "initCalls": 2,
+        "titles": [
+          "Users",
+          "Forbidden"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/users/",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/settings/users/",
+        "name": "Users",
+        "initCalls": 1,
+        "titles": [
+          "Users"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/users/3",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/settings/users/3",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "User",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "titles": [
+          "User",
+          "Forbidden"
+        ]
+      }
+    },
+    {
+      "url": "/settings/users/3",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/settings/users/3",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "User",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/users/3",
+        "name": "User",
+        "titles": [
+          "User"
+        ]
+      }
+    },
+    {
+      "url": "/settings/users/3",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "initCalls": 2,
+        "titles": [
+          "User",
+          "Forbidden"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/users/3",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/settings/users/3",
+        "name": "User",
+        "initCalls": 1,
+        "titles": [
+          "User"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/users/3/",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/settings/users/3/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "User",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "titles": [
+          "User",
+          "Forbidden"
+        ]
+      }
+    },
+    {
+      "url": "/settings/users/3/",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/settings/users/3/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "User",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/users/3/",
+        "name": "User",
+        "titles": [
+          "User"
+        ]
+      }
+    },
+    {
+      "url": "/settings/users/3/",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "initCalls": 2,
+        "titles": [
+          "User",
+          "Forbidden"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/users/3/",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/settings/users/3/",
+        "name": "User",
+        "initCalls": 1,
+        "titles": [
+          "User"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/Users/3",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/settings/Users/3",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "User",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "titles": [
+          "User",
+          "Forbidden"
+        ]
+      }
+    },
+    {
+      "url": "/settings/Users/3",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/settings/Users/3",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "User",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/Users/3",
+        "name": "User",
+        "titles": [
+          "User"
+        ]
+      }
+    },
+    {
+      "url": "/settings/Users/3",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "initCalls": 2,
+        "titles": [
+          "User",
+          "Forbidden"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/Users/3",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/settings/Users/3",
+        "name": "User",
+        "initCalls": 1,
+        "titles": [
+          "User"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/xyz",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/settings/xyz",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/settings/xyz",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/settings/xyz",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/settings/xyz",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/settings/xyz",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/settings/xyz",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/settings/xyz",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/xyz",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/settings/xyz",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/users/3/4",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/settings/users/3/4",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/settings/users/3/4",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/settings/users/3/4",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/settings/users/3/4",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/settings/users/3/4",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/settings/users/3/4",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/settings/users/3/4",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/settings/users/3/4",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/settings/users/3/4",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/share",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/share",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/share",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/share",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share/",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/share/",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share/",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/share/",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share/",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/share/",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share/",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/share/",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share/abc",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/share/abc",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share/abc",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/share/abc",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share/abc",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/share/abc",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share/abc",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/share/abc",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share/abc/def?token=1",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/share/abc/def?token=1",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share/abc/def?token=1",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/share/abc/def?token=1",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share/abc/def?token=1",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/share/abc/def?token=1",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/share/abc/def?token=1",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/share/abc/def?token=1",
+        "name": "Share",
+        "initCalls": 1,
+        "titles": [
+          "Share"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/403",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "initCalls": 1,
+        "titles": [
+          "Forbidden"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/403",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "initCalls": 1,
+        "titles": [
+          "Forbidden"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/403",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "initCalls": 1,
+        "titles": [
+          "Forbidden"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/403",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "initCalls": 1,
+        "titles": [
+          "Forbidden"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/404",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/404",
+        "name": "NotFound",
+        "initCalls": 1,
+        "titles": [
+          "NotFound"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/404",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/404",
+        "name": "NotFound",
+        "initCalls": 1,
+        "titles": [
+          "NotFound"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/404",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/404",
+        "name": "NotFound",
+        "initCalls": 1,
+        "titles": [
+          "NotFound"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/404",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/404",
+        "name": "NotFound",
+        "initCalls": 1,
+        "titles": [
+          "NotFound"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/404/",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/404/",
+        "name": "NotFound",
+        "initCalls": 1,
+        "titles": [
+          "NotFound"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/404/",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/404/",
+        "name": "NotFound",
+        "initCalls": 1,
+        "titles": [
+          "NotFound"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/404/",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/404/",
+        "name": "NotFound",
+        "initCalls": 1,
+        "titles": [
+          "NotFound"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/404/",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/404/",
+        "name": "NotFound",
+        "initCalls": 1,
+        "titles": [
+          "NotFound"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/500",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/500",
+        "name": "InternalServerError",
+        "initCalls": 1,
+        "titles": [
+          "InternalServerError"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/500",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/500",
+        "name": "InternalServerError",
+        "initCalls": 1,
+        "titles": [
+          "InternalServerError"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/500",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/500",
+        "name": "InternalServerError",
+        "initCalls": 1,
+        "titles": [
+          "InternalServerError"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/500",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/500",
+        "name": "InternalServerError",
+        "initCalls": 1,
+        "titles": [
+          "InternalServerError"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/foo",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/foo",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/foo",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/foo",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/foo",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/foo",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/foo",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/foo",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/foo",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/foo",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/foo/bar/",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/foo/bar/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/foo/bar/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/foo/bar/",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/foo/bar/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/foo/bar/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/foo/bar/",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/foo/bar/",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/foo/bar/",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/foo/bar/",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/a%20b",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/a+b",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a b",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/a%20b",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/a+b",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a b",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/a%20b",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/a b",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/a%20b",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/a b",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/a%2Fb",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/a/b",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a/b",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/a%2Fb",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/a/b",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a/b",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/a%2Fb",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/a/b",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/a%2Fb",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/a/b",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/a%3Fb=1",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/a?b=1",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/a%3Fb=1",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/a?b=1",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/a%3Fb=1",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/a?b=1",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/a%3Fb=1",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/a?b=1",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/x%23y",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/x%23y",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/x",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/x%23y",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/x%23y",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/x",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/x%23y",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/x#y",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/x%23y",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/x#y",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/a+b",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/a%2Bb",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a+b",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/a+b",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/a%2Bb",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a+b",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/a+b",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/a+b",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/a+b",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/a+b",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/foo?a=b%20c&d=%2B#hh",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/foo?a=b%2Bc%26d=%252B%23hh",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/foo",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/foo?a=b%20c&d=%2B#hh",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/foo?a=b%2Bc%26d=%252B%23hh",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/foo",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/foo?a=b%20c&d=%2B#hh",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/foo?a=b+c&d=%2B#hh",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/foo?a=b%20c&d=%2B#hh",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/foo?a=b+c&d=%2B#hh",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/%E4%B8%AD/",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/%E4%B8%AD/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/中/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/%E4%B8%AD/",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/%E4%B8%AD/",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/中/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/%E4%B8%AD/",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/中/",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/%E4%B8%AD/",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/中/",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/%ZZ",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/%25ZZ",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/%ZZ",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/%ZZ",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/%25ZZ",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/%ZZ",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/%ZZ",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/%ZZ",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/%ZZ",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/%ZZ",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/%ZZ",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/%25ZZ",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/%ZZ",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/%ZZ",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/%25ZZ",
+        "name": "Login",
+        "initCalls": 2,
+        "titles": [
+          "Files",
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/%ZZ",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/files/%ZZ",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/%ZZ",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/files/%ZZ",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/%ZZ",
+        "name": "Files",
+        "initCalls": 1,
+        "titles": [
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login/",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login/",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login/",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login/",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login/",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/login/",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login/",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/login/",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/LOGIN",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/LOGIN",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/LOGIN",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/LOGIN",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/LOGIN",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/LOGIN",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/LOGIN",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/LOGIN",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?logout-reason=inactivity",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?logout-reason=inactivity",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?logout-reason=inactivity",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?logout-reason=inactivity",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?logout-reason=inactivity",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?logout-reason=inactivity",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?logout-reason",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?logout-reason",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?logout-reason",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?logout-reason",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?logout-reason",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?logout-reason",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/settings",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/settings",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "titles": [
+          "ProfileSettings"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/settings",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/settings",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/profile",
+        "name": "ProfileSettings",
+        "titles": [
+          "ProfileSettings"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/settings",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/settings",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/settings/global",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/settings/global",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "titles": [
+          "GlobalSettings",
+          "Forbidden"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/settings/global",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/settings/global",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/settings/global",
+        "name": "GlobalSettings",
+        "titles": [
+          "GlobalSettings"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/settings/global",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/settings/global",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/login",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/login",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/login",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/login",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/login",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/login",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=../x/y",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=../x/y",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/x/y",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=../x/y",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=../x/y",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/x/y",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=../x/y",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=../x/y",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=files/x",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=files/x",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/x",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=files/x",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=files/x",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/x",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=files/x",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=files/x",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=%2Ffiles%2Fa%2520b",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=%2Ffiles%2Fa%2520b",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a%20b",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=%2Ffiles%2Fa%2520b",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=%2Ffiles%2Fa%2520b",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a%20b",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=%2Ffiles%2Fa%2520b",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=%2Ffiles%2Fa%2520b",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/files/a?q=1%23x",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/a?q=1%23x",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/files/a?q=1%23x",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/a?q=1%23x",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/files/a?q=1%23x",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/files/a?q=1%23x",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/files/a%23x",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/a%23x",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/files/a%23x",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/a%23x",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/a",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/files/a%23x",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/files/a%23x",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/share/xyz",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/share/xyz",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/share/xyz",
+        "name": "Share",
+        "titles": [
+          "Share"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/share/xyz",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/share/xyz",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/share/xyz",
+        "name": "Share",
+        "titles": [
+          "Share"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/share/xyz",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/share/xyz",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/403",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/403",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "titles": [
+          "Forbidden"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/403",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/403",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/403",
+        "name": "Forbidden",
+        "titles": [
+          "Forbidden"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/403",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/403",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/foo/bar",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/foo/bar",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/foo/bar",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/foo/bar",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/foo/bar",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/foo/bar",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/foo/bar",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/foo/bar",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/files/x&logout-reason=inactivity",
+      "scenario": "anonymousThenUser",
+      "first": {
+        "fullPath": "/login?redirect=/files/x&logout-reason=inactivity",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/x",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/files/x&logout-reason=inactivity",
+      "scenario": "anonymousThenAdmin",
+      "first": {
+        "fullPath": "/login?redirect=/files/x&logout-reason=inactivity",
+        "name": "Login",
+        "initCalls": 1,
+        "titles": [
+          "Login"
+        ]
+      },
+      "afterLogin": {
+        "fullPath": "/files/x",
+        "name": "Files",
+        "titles": [
+          "Files"
+        ]
+      }
+    },
+    {
+      "url": "/login?redirect=/files/x&logout-reason=inactivity",
+      "scenario": "user",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    },
+    {
+      "url": "/login?redirect=/files/x&logout-reason=inactivity",
+      "scenario": "admin",
+      "first": {
+        "fullPath": "/files/",
+        "name": "Files",
+        "initCalls": 2,
+        "titles": [
+          "Login",
+          "Files"
+        ]
+      },
+      "afterLogin": null
+    }
+  ]
+}
