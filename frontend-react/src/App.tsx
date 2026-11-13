@@ -8,6 +8,8 @@ import { getMediaPreference, getTheme, setTheme } from '@/lib/theme'
 import { useRouteStore } from '@/router'
 import Login from '@/views/Login'
 import Placeholder from '@/views/Placeholder'
+import Settings from '@/views/Settings'
+import { isSettingsRoute } from '@/views/settings/logic'
 
 function removeLoadingScreen() {
   const loading = document.getElementById('loading')
@@ -35,6 +37,8 @@ function AppView() {
     <>
       {route.name === 'Login' ? (
         <Login />
+      ) : isSettingsRoute(route.name) ? (
+        <Settings name={route.name} />
       ) : (
         <Placeholder name={route.name!} />
       )}

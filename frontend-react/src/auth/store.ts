@@ -6,6 +6,8 @@ interface AuthState {
   jwt: string
   logoutTimer: number | null
   setUser: (user: IUser | null) => void
+  /** Merges changes into the user, applying a new locale. */
+  updateUser: (user: Partial<IUser>) => void
   clearUser: () => void
   setLogoutTimer: (logoutTimer: number | null) => void
 }
@@ -22,6 +24,15 @@ export const useAuthStore = create<AuthState>()((set) => ({
     }
     setLocale(user.locale || detectLocale())
     set({ user })
+  },
+  updateUser: (user) => {
+    if (user.locale) {
+      setLocale(user.locale)
+    }
+    // Nobody is logged in (e.g. a save that finished after logout): stay logged out.
+    set((state) =>
+      state.user === null ? {} : { user: { ...state.user, ...structuredClone(user) } },
+    )
   },
   // Like pinia's $reset: the locale is left untouched.
   clearUser: () => set(initialState),

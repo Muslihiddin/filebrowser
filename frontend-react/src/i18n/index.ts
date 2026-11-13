@@ -1,4 +1,5 @@
 import i18next, { type Resource } from 'i18next'
+import dayjs from '@/lib/dayjs'
 import { initReactI18next } from 'react-i18next'
 
 // The translations are shared with the Vue app, which remains the source of
@@ -132,6 +133,7 @@ export const rtlLanguages = ['he', 'ar']
 // The locale exactly as requested (vue-i18n's `locale`), i18next may normalize
 // or refuse some codes.
 let currentLocale = detectLocale()
+dayjs.locale(currentLocale)
 
 export const i18n = i18next.createInstance()
 
@@ -166,6 +168,7 @@ export function onLocaleChange(listener: LocaleListener): () => void {
 }
 
 export function setLocale(locale: string) {
+  dayjs.locale(locale)
   const changed = locale !== currentLocale
   currentLocale = locale
   void i18n.changeLanguage(locale)

@@ -51,3 +51,16 @@ export function showError(error: Error | string, displayReport = true) {
       : undefined,
   })
 }
+
+/** Success toast, like `$showSuccess` of the Vue app (4s, closes on click). */
+export function showSuccess(message: string) {
+  registerCloseOnClick()
+
+  const id = `success-${++nextId}`
+  toast.success(message, {
+    id,
+    className: `${TOAST_CLASS_PREFIX}${id}`,
+    duration: 4000,
+    closeButton: true,
+  })
+}

@@ -64,4 +64,16 @@ declare global {
     dateFormat: boolean
     aceEditorTheme: string
   }
+
+  /** Share link, as listed by /api/shares (see http/share.go shareResponse). */
+  interface Share {
+    hash: string
+    path: string
+    /** Unix time in seconds, 0 for permanent shares. */
+    expire: number
+    userID?: number
+    hasPassword?: boolean
+    /** Filled in by the share management page for admins. */
+    username?: string
+  }
 }

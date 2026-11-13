@@ -128,3 +128,20 @@
     @apply font-sans;
     }
 }
+/* Like the "delayed" class of the Vue app: hidden for the first 100ms, so
+   that fast loads do not flash a spinner. */
+@utility animate-delayed {
+    animation: delayed linear 100ms;
+}
+
+@keyframes delayed {
+    0% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
