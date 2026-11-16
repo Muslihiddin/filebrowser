@@ -1,4 +1,4 @@
-import { useId, useState, type FormEvent } from "react";
+import { useId, useState, type SubmitEvent } from "react";
 import { useTranslation } from "react-i18next";
 import * as api from "@/api/users";
 import { useAuthStore } from "@/auth/store";
@@ -66,7 +66,7 @@ export default function Profile() {
     value: ProfileSettings[K],
   ) => setSettings((current) => current && { ...current, [key]: value });
 
-  const updateSettings = async (event: FormEvent<HTMLFormElement>) => {
+  const updateSettings = async (event: SubmitEvent) => {
     event.preventDefault();
 
     try {
@@ -84,7 +84,7 @@ export default function Profile() {
     }
   };
 
-  const updatePassword = async (event: FormEvent<HTMLFormElement>) => {
+  const updatePassword = async (event: SubmitEvent) => {
     event.preventDefault();
 
     const current = useAuthStore.getState().user;

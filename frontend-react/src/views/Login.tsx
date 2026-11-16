@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, type SubmitEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { StatusError } from "@/api/utils";
 import * as auth from "@/auth/auth";
@@ -26,7 +26,7 @@ export default function Login() {
   const reason = firstQueryValue(route?.query["logout-reason"]) ?? null;
   const signup = config.signup;
 
-  const submit = async (event: FormEvent<HTMLFormElement>) => {
+  const submit = async (event: SubmitEvent) => {
     event.preventDefault();
     event.stopPropagation();
 

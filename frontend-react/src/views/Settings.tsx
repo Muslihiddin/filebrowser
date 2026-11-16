@@ -48,7 +48,7 @@ export default function Settings({ name }: { name: RouteName }) {
 
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">
         <nav aria-label={t("sidebar.settings")} className="overflow-x-auto">
-          <ul className="inline-flex h-9 w-fit min-w-max items-center gap-1 rounded-lg bg-muted p-[3px] text-muted-foreground">
+          <ul className="inline-flex h-9 w-fit min-w-max items-center gap-1 rounded-lg bg-muted p-0.75 text-muted-foreground">
             {tabs.map((tab) => (
               <li key={tab.to} className="h-full">
                 <RouterLink
