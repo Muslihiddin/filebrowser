@@ -1,8 +1,8 @@
-import type { ComponentProps, MouseEvent } from 'react'
-import { config } from '@/config'
-import { router } from '@/router'
+import type { ComponentProps, MouseEvent } from "react";
+import { config } from "@/config";
+import { router } from "@/router";
 
-type Props = Omit<ComponentProps<'a'>, 'href'> & { to: string }
+type Props = Omit<ComponentProps<"a">, "href"> & { to: string };
 
 /**
  * Link navigating through the app router, like vue-router's <router-link>:
@@ -11,7 +11,7 @@ type Props = Omit<ComponentProps<'a'>, 'href'> & { to: string }
  */
 export function RouterLink({ to, onClick, target, ...props }: Props) {
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    onClick?.(event)
+    onClick?.(event);
     // same checks as vue-router's guardEvent
     if (
       event.defaultPrevented ||
@@ -22,11 +22,18 @@ export function RouterLink({ to, onClick, target, ...props }: Props) {
       event.button !== 0 ||
       (target && /\b_blank\b/i.test(target))
     ) {
-      return
+      return;
     }
-    event.preventDefault()
-    void router.push(to)
-  }
+    event.preventDefault();
+    void router.push(to);
+  };
 
-  return <a href={config.baseURL + to} target={target} onClick={handleClick} {...props} />
+  return (
+    <a
+      href={config.baseURL + to}
+      target={target}
+      onClick={handleClick}
+      {...props}
+    />
+  );
 }

@@ -1,72 +1,72 @@
-import { useState, type FormEvent } from 'react'
-import { useTranslation } from 'react-i18next'
-import { StatusError } from '@/api/utils'
-import * as auth from '@/auth/auth'
-import { Alert, AlertDescription } from '@/components/ui/alert'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { config } from '@/config'
-import { showError } from '@/lib/toast'
-import { router, useRouteStore } from '@/router'
-import { firstQueryValue } from '@/router/location'
+import { useState, type FormEvent } from "react";
+import { useTranslation } from "react-i18next";
+import { StatusError } from "@/api/utils";
+import * as auth from "@/auth/auth";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { config } from "@/config";
+import { showError } from "@/lib/toast";
+import { router, useRouteStore } from "@/router";
+import { firstQueryValue } from "@/router/location";
 
 // Port of frontend/src/views/Login.vue (without reCAPTCHA).
 export default function Login() {
-  const { t } = useTranslation()
-  const route = useRouteStore((state) => state.current)
+  const { t } = useTranslation();
+  const route = useRouteStore((state) => state.current);
 
-  const [createMode, setCreateMode] = useState(false)
-  const [error, setError] = useState('')
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const [passwordConfirm, setPasswordConfirm] = useState('')
+  const [createMode, setCreateMode] = useState(false);
+  const [error, setError] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirm, setPasswordConfirm] = useState("");
 
-  const reason = firstQueryValue(route?.query['logout-reason']) ?? null
-  const signup = config.signup
+  const reason = firstQueryValue(route?.query["logout-reason"]) ?? null;
+  const signup = config.signup;
 
   const submit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    event.stopPropagation()
+    event.preventDefault();
+    event.stopPropagation();
 
-    const redirect = route?.query.redirect
+    const redirect = route?.query.redirect;
 
     if (createMode && password !== passwordConfirm) {
-      setError(t('login.passwordsDontMatch'))
-      return
+      setError(t("login.passwordsDontMatch"));
+      return;
     }
 
     try {
       if (createMode) {
-        await auth.signup(username, password)
+        await auth.signup(username, password);
       }
 
-      await auth.login(username, password, '')
+      await auth.login(username, password, "");
       // Like Vue, where router.push can't resolve an array path (?redirect=/a&redirect=/b).
-      if (Array.isArray(redirect)) return
-      await router.push({ path: redirect || '/files/' })
+      if (Array.isArray(redirect)) return;
+      await router.push({ path: redirect || "/files/" });
     } catch (e) {
       if (e instanceof StatusError) {
         if (e.status === 409) {
-          setError(t('login.usernameTaken'))
+          setError(t("login.usernameTaken"));
         } else if (e.status === 403) {
-          setError(t('login.wrongCredentials'))
+          setError(t("login.wrongCredentials"));
         } else if (e.status === 400) {
-          const match = e.message.match(/minimum length is (\d+)/)
+          const match = e.message.match(/minimum length is (\d+)/);
           if (match) {
-            setError(t('login.passwordTooShort', { min: match[1] }))
+            setError(t("login.passwordTooShort", { min: match[1] }));
           } else {
-            setError(e.message)
+            setError(e.message);
           }
         } else {
-          showError(e)
+          showError(e);
         }
       } else {
-        console.error(e)
+        console.error(e);
       }
     }
-  }
+  };
 
   return (
     <main className="flex min-h-svh items-center justify-center p-6 md:p-10">
@@ -86,14 +86,14 @@ export default function Login() {
                 </AlertDescription>
               </Alert>
             )}
-            {error !== '' && (
+            {error !== "" && (
               <Alert variant="destructive">
                 <AlertDescription>{error}</AlertDescription>
               </Alert>
             )}
 
             <div className="grid gap-2">
-              <Label htmlFor="login-username">{t('login.username')}</Label>
+              <Label htmlFor="login-username">{t("login.username")}</Label>
               <Input
                 id="login-username"
                 name="username"
@@ -103,25 +103,25 @@ export default function Login() {
                 autoComplete="username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                placeholder={t('login.username')}
+                placeholder={t("login.username")}
               />
             </div>
             <div className="grid gap-2">
-              <Label htmlFor="login-password">{t('login.password')}</Label>
+              <Label htmlFor="login-password">{t("login.password")}</Label>
               <Input
                 id="login-password"
                 name="password"
                 type="password"
-                autoComplete={createMode ? 'new-password' : 'current-password'}
+                autoComplete={createMode ? "new-password" : "current-password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder={t('login.password')}
+                placeholder={t("login.password")}
               />
             </div>
             {createMode && (
               <div className="grid gap-2">
                 <Label htmlFor="login-password-confirm">
-                  {t('login.passwordConfirm')}
+                  {t("login.passwordConfirm")}
                 </Label>
                 <Input
                   id="login-password-confirm"
@@ -130,13 +130,13 @@ export default function Login() {
                   autoComplete="new-password"
                   value={passwordConfirm}
                   onChange={(e) => setPasswordConfirm(e.target.value)}
-                  placeholder={t('login.passwordConfirm')}
+                  placeholder={t("login.passwordConfirm")}
                 />
               </div>
             )}
 
             <Button type="submit" className="w-full">
-              {createMode ? t('login.signup') : t('login.submit')}
+              {createMode ? t("login.signup") : t("login.submit")}
             </Button>
 
             {signup && (
@@ -145,12 +145,14 @@ export default function Login() {
                 variant="link"
                 onClick={() => setCreateMode((mode) => !mode)}
               >
-                {createMode ? t('login.loginInstead') : t('login.createAnAccount')}
+                {createMode
+                  ? t("login.loginInstead")
+                  : t("login.createAnAccount")}
               </Button>
             )}
           </form>
         </CardContent>
       </Card>
     </main>
-  )
+  );
 }

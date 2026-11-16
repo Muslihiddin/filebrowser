@@ -1,13 +1,16 @@
-import { aceThemes } from './options'
-import { SettingsSelect } from './SettingsSelect'
+import { aceThemes } from "./options";
+import { SettingsSelect } from "./SettingsSelect";
 
-const options = aceThemes.map((theme) => ({ value: theme.theme, label: theme.name }))
+const options = aceThemes.map((theme) => ({
+  value: theme.theme,
+  label: theme.name,
+}));
 
 // Port of frontend/src/components/settings/AceEditorTheme.vue
 export function AceEditorTheme(props: {
-  id: string
-  aceEditorTheme: string
-  onChange: (theme: string) => void
+  id: string;
+  aceEditorTheme: string;
+  onChange: (theme: string) => void;
 }) {
   return (
     <SettingsSelect
@@ -17,5 +20,5 @@ export function AceEditorTheme(props: {
       options={options}
       onChange={props.onChange}
     />
-  )
+  );
 }

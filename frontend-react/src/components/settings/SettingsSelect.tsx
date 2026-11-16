@@ -1,11 +1,14 @@
-import { NativeSelect, NativeSelectOption } from '@/components/ui/native-select'
+import {
+  NativeSelect,
+  NativeSelectOption,
+} from "@/components/ui/native-select";
 
 interface Props {
-  id: string
-  name: string
-  value: string
-  options: { value: string; label: string }[]
-  onChange: (value: string) => void
+  id: string;
+  name: string;
+  value: string;
+  options: { value: string; label: string }[];
+  onChange: (value: string) => void;
 }
 
 /**
@@ -14,7 +17,7 @@ interface Props {
  * showing the first option.
  */
 export function SettingsSelect({ id, name, value, options, onChange }: Props) {
-  const known = options.some((option) => option.value === value)
+  const known = options.some((option) => option.value === value);
   return (
     <NativeSelect
       id={id}
@@ -30,5 +33,5 @@ export function SettingsSelect({ id, name, value, options, onChange }: Props) {
         </NativeSelectOption>
       ))}
     </NativeSelect>
-  )
+  );
 }

@@ -3,7 +3,7 @@
 /** Encodes every segment of a path, keeping the slashes. */
 export function encodePath(str: string): string {
   return str
-    .split('/')
+    .split("/")
     .map((v) => encodeURIComponent(v))
-    .join('/')
+    .join("/");
 }

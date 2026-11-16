@@ -1,10 +1,17 @@
-import { languages } from './options'
-import { SettingsSelect } from './SettingsSelect'
+import { languages } from "./options";
+import { SettingsSelect } from "./SettingsSelect";
 
-const options = Object.entries(languages).map(([value, label]) => ({ value, label }))
+const options = Object.entries(languages).map(([value, label]) => ({
+  value,
+  label,
+}));
 
 // Port of frontend/src/components/settings/Languages.vue
-export function Languages(props: { id: string; locale: string; onChange: (locale: string) => void }) {
+export function Languages(props: {
+  id: string;
+  locale: string;
+  onChange: (locale: string) => void;
+}) {
   return (
     <SettingsSelect
       id={props.id}
@@ -13,5 +20,5 @@ export function Languages(props: { id: string; locale: string; onChange: (locale
       options={options}
       onChange={props.onChange}
     />
-  )
+  );
 }
