@@ -1,0 +1,4 @@
+pnpm-lock.yaml
+src/router/__fixtures__/
+# Go template rendered by the server
+public/index.html
